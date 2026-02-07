@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sana Bir Şey Var ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.3);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 400px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      background: white;
+      color: #ff4f7b;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1 id="text">Sana bir şey söylemek istiyorum…</h1>
+    <button onclick="degistir()">Devam et</button>
+  </div>
+
+  <script>
+    let mesajlar = [
+      "Dünyada en güzel gülüşlü insansın 🥰",
+    ];
+
+    let index = 0;
+
+    function degistir() {
+      if (index < mesajlar.length) {
+        document.getElementById("text").innerText = mesajlar[index];
+        index++;
+      }
+    }
+  </script>
+
+</body>
+</html>
